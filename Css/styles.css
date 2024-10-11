@@ -1,0 +1,654 @@
+* { margin: 0; 
+padding: 0; 
+box-sizing: border-box; 
+list-style: none;
+}
+
+body { 
+font-family: Arial, sans-serif; 
+background-color: #f4f4f4; 
+color: #333; 
+line-height: 1.6; 
+padding: 2px;
+}
+
+/* ...Navigation Area ---- */
+
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+background-color: #003366;
+height: 150px;
+color: white; 
+/* position: relative; */
+}
+
+.logo {
+/* width: auto; */
+margin-right: 3px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: left;    
+flex:1
+}
+
+.logo-img {
+width: 120px;
+height: 120px;
+border-radius: 60px;
+margin-right: 0;
+margin-left: 0;
+padding-right: 0;
+}
+
+.logo-text {
+align-content: center;
+justify-content: center;
+width:180px;
+margin-top: 4px;
+margin-left: 2px;
+padding: 1px;
+font-size: 30px;
+font-weight: bold;
+height: 120px;
+color: #ffa500;
+}
+
+/* ****  Menu / Close Icons **** */
+
+#menuButton, #closeButton {     
+cursor: pointer;
+font-size: 18px;
+color:white ;
+font-weight: bold;  
+
+}
+
+#navMenu {
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+width: 200px; /* Adjust the width as needed */
+background-color: #003366;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+transition: transform 0.3s ease-in-out;
+transform: translateX(100%); /* Start off hidden to the right */
+}
+
+nav ul {
+
+
+}
+
+nav ul li {
+list-style: none;
+margin: 20px;
+}
+
+nav ul li a {
+text-decoration: none;
+}
+
+.hidden {
+display: none;
+}
+
+#navMenu.visible {
+transform: translateX(0); /* Slide in from the right */
+}
+
+#closeButton {
+position: absolute;
+top: 20px;
+right: 20px;
+color: white; 
+}
+
+#menuButton {
+position: absolute;
+top: 20px;
+right: 20px;
+color: white ;
+}
+
+.fa-bars, .fa-xmark {
+font-size: 30px;
+}
+
+/* Home Section */ 
+
+#home { 
+height: 100vh; 
+
+background:linear-gradient(rgba(0,0,0,0.5),#00009688),url("../Images/logistics-means-transport-together-with-technological-futuristic-holograms_23-2151662986.jpg") no-repeat center center/cover;
+display: flex; 
+justify-content: center; 
+align-items: center; 
+color: white; 
+text-align: center; 
+}
+
+#home .home-content h1 { 
+font-size: 3rem; 
+}
+
+#home .home-content p { 
+margin: 1rem 0; 
+}
+
+.btn { 
+padding: 0.8rem 1.5rem; 
+background-color: #ffa500; 
+color: white; 
+text-decoration: none; 
+border-radius: 5px; 
+}
+
+.btn:hover { 
+background-color: #ff7f00; 
+}
+
+/* Services Section */ 
+
+#services { 
+padding: 2rem; 
+background-color: #fff; 
+text-align: left; 
+}
+
+#services h2 { 
+margin-bottom: 2rem; 
+font-size: 2rem; 
+color: #003366; 
+text-align: center;
+}
+
+.service-container { 
+display: flex; 
+justify-content: space-around; 
+gap: 1.5rem; 
+flex-wrap: wrap;
+}
+
+.service { 
+
+background-color: #f9f9f9; 
+padding: 1.5rem; 
+border-radius: 8px; 
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+width: 45%; 
+}
+
+.service h3 { 
+color: #003366; 
+margin-bottom: 1rem; 
+text-align: center;
+}
+
+.service p {
+text-align: center ;
+}
+
+.service-01 {
+display: flex;
+flex-direction: column;  
+padding-bottom: 1px;
+}
+
+.service-description {
+width: auto;
+}
+
+.service-img {
+width: 300px;
+/*  height: 300px;*/
+margin-top: 10px;
+margin-bottom: 10px;
+
+}
+
+
+/* About Us Section */ 
+
+#about { 
+padding: 2rem; 
+background-color: #e6f0ff; 
+text-align: center; 
+margin: 8px;
+}
+
+#about h2 { 
+font-size: 2rem; 
+margin-bottom: 1rem; 
+color: #003366; 
+}
+
+/* why choose us section */
+
+
+
+/* Contact Section */ 
+
+#contact { 
+padding: 2rem; 
+background-color: #fff; 
+text-align: center; 
+}
+
+#contact-form { 
+display: flex; 
+flex-direction: column; 
+gap: 1rem; 
+max-width: 500px; 
+margin: 0 auto; 
+}
+
+#contact-form input, #contact-form textarea { 
+padding: 0.8rem; 
+border: 1px solid #ccc; 
+border-radius: 5px; 
+width: 100%; 
+}
+
+#contact-form button { 
+padding: 0.8rem; 
+background-color: #003366; 
+color: white; 
+border: none; 
+border-radius: 5px; 
+cursor: pointer; 
+}
+
+#contact-form button:hover { 
+background-color: #002244; 
+}
+
+.contact-info p { 
+margin-top: 1.5rem; 
+}
+
+/* ****Click to Call*** */
+
+.button-container { 
+display: flex; 
+flex-wrap: wrap;
+justify-content: center; 
+gap: 1rem; 
+margin: 2rem;
+text-align: center;
+}
+
+.button-container a {
+margin: 10px;
+}
+
+i {
+font-size: 30px;
+}
+
+.fa-whatsapp {
+color: #25d366;
+}
+
+.whatsapp-button:hover {
+color: #20b357;
+}
+
+.fa-phone {
+color:#007bff;
+}
+
+.call-button {
+color: #007bff; 
+}
+
+.fa-envelope {
+color: #ff5722;
+}
+
+.mail-button { 
+color: #ff5722; 
+}
+
+.fa-facebook { 
+color: #3b5998; 
+}
+
+.fa-linkedin { 
+color: #0077b5; 
+}
+
+.fa-instagram {
+color: #e4405f; 
+}
+
+.fa-youtube {
+color: #ff0000; 
+}
+
+.fa-twitter {
+color: #1da1f2; 
+}
+
+/* Footer */ 
+footer { 
+padding: 1rem; 
+background-color: #003366; 
+color: white; 
+text-align: center; 
+}
+
+/* Responsive Styles */ 
+
+@media only screen and (max-width: 1200px) { 
+.service { 
+width: 45%; 
+} 
+
+.menu-col {
+display: none;
+}
+
+}
+
+
+
+/*  ***** Responsive Styles Header *** */
+
+
+@media(min-width:768.5px){
+
+.nav-col{
+display: none; 
+}
+
+.logo-text {
+width: auto;
+min-width: 270px;
+font-size: 30px;
+text-align: left;    
+}
+
+.logo-img {
+margin-right: 20px;
+height: 145px;   
+width: 145px;
+border-radius: 73px;
+}
+
+.service-img {
+align-self: center;
+width: 100%;
+}
+
+.nav-row ul{
+display: flex;
+justify-content: space-between;
+width: 400px;
+
+}
+
+.nav-row ul li {
+list-style: none;
+}
+
+.nav-row ul li a{
+font-size: 22px;
+color: white;
+text-decoration: none;
+margin-right: 20px;
+}
+
+.service {
+width: 48%;
+}
+
+.contact-us {
+
+width: 100%;
+margin-bottom: 2rem;
+justify-content: center;
+padding: 20px;
+} 
+}
+
+@media(min-width:739) and (max-width:768){
+
+.logo-text {
+width: 500px;
+font-size: 40px;
+}    
+}
+
+@media(max-width:768px){
+
+.nav-row {
+display: none
+}
+
+.nav-col li{
+justify-content: space-between;
+}
+
+.hidden {
+width: 300px;
+}
+
+.hidden ul li a {
+color: red;
+font-size: 29px;
+}
+
+.nav-col ul {
+padding: 10px;
+width: auto;  
+margin: 20px;
+}
+
+#closeButton, #menuButton {
+position: absolute;
+top: 60px;
+right: 40px;
+color: white; 
+}
+
+
+.logo-img {
+margin-right: 20px;
+height: 140px;   
+width: 140px;
+border-radius: 70px;
+
+}
+
+.fa-bars, .fa-xmark {
+font-size: 50px;
+}
+
+h2 {
+font-size: 2.5rem;
+}
+
+.service {
+width:750px;
+}
+
+
+.service-img {
+display: block;
+width: 90%;
+}
+
+.contact-us {
+width: 100%;
+}
+}
+
+
+
+@media only screen and (max-width: 768px) and (min-width: 576px){
+
+.service h3 {
+font-size: 2.5rem;
+}
+
+.service p {
+font-size: 2rem;
+}
+
+.logo-text {
+font-size:27px;
+height: 127px;
+text-align: left;
+width: 250px;
+margin-left: 15px;
+margin-bottom: 10px;
+} 
+
+.contact-us {
+margin-bottom: 30px;
+}
+
+.service-img {
+align-self: center;
+width: 100%;
+}
+}
+
+@media(min-width:609px) and (max-width:768px) {
+
+}
+
+
+
+@media only screen and (max-width: 575.98px) { 
+
+/* Adjust home section text size */
+
+.logo-img {
+margin-right: 10px;
+}
+
+.logo-text {
+font-size: 26px;
+height: 130px;
+width: 200px;
+text-align: left;
+margin-left: 5px;
+} 
+
+
+.fa-bars, .fa-xmark {
+font-size: 30px;
+}
+
+
+#closeButton, #menuButton {
+position: absolute;
+top: 60px;
+right: 20px;
+color: white; 
+}
+
+.nav-col ul li a {
+color: white;
+font-size: 17px;
+}
+
+#home .home-content h1 { 
+font-size: 2rem;
+} 
+
+/* Smaller buttons */ 
+.btn { 
+padding: 0.6rem 1.2rem;
+}
+
+/* Services to single column on small screens */ 
+
+.service-container { 
+flex-direction: column;
+} 
+
+.service { 
+width: 100%; 
+margin-bottom: 1rem;
+align-items: center;
+} 
+
+.service-img {
+align-self: center;
+width: 100%;
+}
+
+.service-01 {
+flex-direction: column;
+}
+
+
+/* Adjust About Us section font size */ 
+#about h2, #contact h2 { 
+font-size: 1.5rem;
+} 
+/* Footer text */ 
+
+footer p { 
+font-size: 0.9rem;
+} 
+
+}
+
+@media only screen and (max-width: 480px) {
+
+.logo-text {
+    font-size: 1.5rem;
+    height: 127px;
+    width: 200px;
+    text-align: left;
+    justify-content: center;
+    
+    } 
+
+.contact-us {
+    width: 100%;
+}   
+} 
+
+@media only screen and (max-width: 375px) {
+
+.logo-text {
+    font-size: 18px;
+    height: 127px;
+    width: 100px;
+    text-align: left;
+    margin-right: 2px;
+    margin-left: 2px;
+} 
+
+
+
+}
+@media only screen and (max-width: 320px) {
+
+.logo-img {
+    height: 115px;
+    width: 115px;
+    border-radius: 57px;
+} 
+
+.logo-text {
+    font-size: 18px;
+    height: 127px;
+    width: 120px;
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+    } 
+}

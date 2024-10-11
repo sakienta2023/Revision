@@ -1,0 +1,191 @@
+header { 
+ background-color: #003366; 
+ color: white; 
+ padding: 1rem; 
+ }
+ 
+ .logo {
+ /* width: 100px; */
+  margin-right: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;    
+  flex:1;
+}
+ 
+nav { 
+display: flex; 
+justify-content: space-between; 
+/*align-items: center; 
+flex-wrap: wrap; */
+}
+
+
+
+img {
+  width: 126px;
+  height: 126px;
+  border-radius: 63px;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  /*display: inline-block; */
+}
+
+.logo-text {
+  align-content: center;
+  justify-content: center;
+  width:auto;
+  margin-top: 4px;
+  margin-left: 2px;
+  padding: 1px;
+  font-size: 29px;
+  font-weight: bold;
+  height: 126px;
+  color: #ffa500;
+  }
+  
+  /* Hide the close icon and navigation menu initially for small screens */ 
+
+nav { 
+position: relative; 
+}
+
+ nav ul { 
+ list-style: none; 
+ display: flex; 
+ gap: 1.5rem; 
+ flex-wrap: wrap;
+ }
+ 
+ #menu-icon {
+  display:none
+ }
+
+ #close-icon { 
+display: none; 
+}
+
+  
+nav ul li a { 
+color: white; 
+text-decoration: none; 
+}
+
+nav ul li a:hover { 
+color: #ffa500; 
+}
+
+/* -- Top Nav Styles -- */
+
+
+
+/* navigation menu initially visible */
+
+.menu-icon {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: red;
+   /* background-color:white; */
+    align-content: center;
+    
+}
+
+
+/* hiding close menu initially */
+
+.close-icon {
+    display: none;
+    font-size:2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* When the navigation is open */ 
+.nav-open #nav-menu {
+    display:flex;
+} 
+
+/* Show the close icon when the menu is open */ 
+
+.nav-open #close-icon { 
+display: block; 
+} 
+
+/* Hide the menu icon when the navigation listis open */ 
+
+.nav-open #menu-icon { 
+display: none; 
+}
+
+#nav-menu {
+    display:none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #003366;
+    padding: 1rem;
+    width: 100%;
+    height: calc(100vh - 50px);
+    
+   /* Fullscreen except for header */
+     
+    list-style: none; 
+    text-align: center;
+    z-index: 1000;
+}
+
+
+
+/*  Menu Column Styles. */
+
+#menuButton, #closeButton {    
+  border: none;
+  background-color: #55acff;
+  cursor: pointer;
+  font-size: 18px;
+  color:white ;
+  font-weight: bold;
+}
+
+#navMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px; /* Adjust the width as needed */
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%); /* Start off hidden to the right */
+}
+
+nav ul li {
+    list-style: none;
+    margin: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#navMenu.visible {
+  transform: translateX(0); /* Slide in from the right */
+}
+
+#closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+}
+
